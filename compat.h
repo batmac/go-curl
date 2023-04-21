@@ -3,6 +3,7 @@
 #include<curl/curl.h>
 
 
+#if LIBCURL_VERSION_MAJOR < 8
 
 #if (LIBCURL_VERSION_MINOR == 57 && LIBCURL_VERSION_PATCH < 0) || LIBCURL_VERSION_MINOR < 57 
 #define CURL_VERSION_BROTLI 0
@@ -526,3 +527,5 @@
 #endif /* 7.56.1 */
 #endif /* 7.57.0 */
 /* generated ends */
+
+#endif
